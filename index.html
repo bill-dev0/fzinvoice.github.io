@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Invoice Generator</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Pearl Robyn">
+    </head>
+    
+    <body>
+
+        <div id="invoice_form" class="row">
+            <div class="col offset-s2 s8">
+                <div class="card white">
+                    <div class="card-image" style="
+                        background-color: #8EC5FC; 
+                        background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+                        height: 50px;">
+                    </div>
+                    <div class="card-title">
+                        <span class="logo">forklift <span id="zim">zim</span></span> Invoice Generator!
+                    </div>
+
+                    <div class="card-content">
+                        <p>
+                        <form id="login_form">
+                        <label for="username">Username:</label>
+                        <input type="text" placeholder="enter username" id="username" required>
+
+                        <label for="password">Password:</label>
+                        <input type="text" placeholder="enter password" id="password" required >
+
+                        <button onclick="loadNext()" type="button" id="submit">login</button>
+
+                        </form>
+                </div>
+
+                <div class="card white">
+                    <div class="card-content">
+                        <p>
+                            (c)
+                                <a href="https://www.instagram.com/@bill_smirk">
+                                    Pearl Robyn
+                                </a>
+                            <hr>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+    <script onload="console.log('script has loaded')">
+        const form = document.getElementById('login_form');
+        const submit = document.getElementById('submit');
+        const zita = 'chenai';
+        const pambi = 'makoni';
+
+
+
+        function loadNext() {
+                let a = form.username.value, b = form.password.value;
+                console.log('loadNext init')
+                if (a === zita && b === pambi) {
+                    alert('login successful!!!');
+                    window.location.href = 'pages/home.html';
+                    console.log('zvaita');
+
+                }else if ( a!== zita && b !== pambi) {
+                    console.log('wrong creds');
+                    alert('Please provide valid credentials!!');
+                } else if ( a === zita && b !== pambi){
+                    console.log('wrong password');
+                    alert('Please provide correct password!!');
+
+                }else {
+                    console.log('watadza zvese')
+                    alert('Please provide correct credentials!!');}
+                console.log('loadNext() declared')
+
+        }
+    </script>
+
+
+</html>
